@@ -85,3 +85,97 @@ button {
 button:hover {
   background-color: #0056b3;
 }
+
+PAGE 2
+
+<!-- Library Management Page HTML Template -->
+<div class="library-container">
+  <h2>Library Management</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Book Name</th>
+        <th>Author</th>
+        <th>ISBN No</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Loop through books and display in tabular format -->
+      <tr *ngFor="let book of books">
+        <td>{{ book.name }}</td>
+        <td>{{ book.author }}</td>
+        <td>{{ book.isbn }}</td>
+        <td>{{ book.price }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+Angular 
+// Library Management Page Component
+import { Component, OnInit } from '@angular/core';
+import { Book } from './book'; // Assuming you have a Book interface or class to represent book data
+
+@Component({
+  selector: 'app-library-management',
+  templateUrl: './library-management.component.html',
+  styleUrls: ['./library-management.component.css']
+})
+export class LibraryManagementComponent implements OnInit {
+  books: Book[] = []; // Array to hold the list of books (populate it with actual book data)
+
+  constructor() {}
+
+  ngOnInit(): void {
+    // Populate books array with actual book data (you can fetch data from a service or API)
+    this.books = [
+      { name: 'Book 1', author: 'Author 1', isbn: 'ISBN001', price: 10.99 },
+      { name: 'Book 2', author: 'Author 2', isbn: 'ISBN002', price: 12.99 },
+      { name: 'Book 3', author: 'Author 3', isbn: 'ISBN003', price: 9.99 },
+      // Add more books as needed
+    ];
+  }
+}
+
+CSS
+/* CSS Styles for Library Management Page */
+.library-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+thead th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  text-align: left;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+tbody td {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+tr:hover {
+  background-color: #f2f2f2;
+}
+
+books.ts
+
+// Book Interface or Class (representing book data)
+export interface Book {
+  name: string;
+  author: string;
+  isbn: string;
+  price: number;
+}
+
+
