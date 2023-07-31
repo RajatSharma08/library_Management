@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>User Details</title>
+  <link rel="stylesheet" href="user.css">
+</head>
+
+<body>
+  <div class="user-container">
+    <h2 style="text-align:center">User Details</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>User Name</th>
+          <th>UserId</th>
+          <th>Email</th>
+          <th>Password</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Loop through users and display in tabular format -->
+        <% users.forEach((user) => { %>
+        <tr>
+          <td><%= user.name %></td>
+          <td><%= user.UserId %></td>
+          <td><%= user.Email %></td>
+          <td><%= user.password %></td>
+        </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  </div>
+</body>
+<script src="C:\Users\smart\libraryApp\src\scripts\usercomponent.js"></script>
+</html>
