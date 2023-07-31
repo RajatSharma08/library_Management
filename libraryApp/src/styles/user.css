@@ -1,0 +1,30 @@
+.library-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #73d5e4
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #2af8cf
+  }
+  
+  thead th {
+    background-color: #1cad87 ;
+    font-weight: bold;
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #0a0a0a;
+  }
+  
+  tbody td {
+    padding: 10px;
+    border-bottom: 1px solid #0a0a0a;
+  }
+  
+  tr:hover {
+    background-color: #f2de31;
+  }
+  

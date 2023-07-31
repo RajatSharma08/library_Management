@@ -1,0 +1,31 @@
+<link rel="stylesheet" type="text/css"  href="inventory.css">
+<h2><body style="text-align:center"></body>Inventory Management</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Book</th>
+      <th>BookId</th>
+      <th>Author</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Loop through Inventory and display in tabular format -->
+    <tr>
+      <td><%= inventory.name %></td>
+      <td><%= inventory.bookId %></td>
+      <td><%= inventory.author %></td>
+      <td><%= inventory.price %></td>
+    </tr>
+    <% books.forEach((book) => { %>
+    <tr>
+      <td><%= inventory.name %></td>
+      <td><%= inventory.bookId %></td>
+      <td><%= inventory.author %></td>
+      <td><%= inventory.price %></td>
+    </tr>
+    <% }); %>
+  </tbody>
+</table>
+<script src="C:\Users\smart\libraryApp\src\scripts\inventorycomponent.js"></script>
+</div>

@@ -1,0 +1,42 @@
+<!-- Issuance Table Page HTML Template -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Issuance Table</title>
+  <link rel="stylesheet" href="issuance.css">
+</head>
+
+<body>
+  <div class="issuance-container">
+    <h2 style="text-align:center">Issuance Table</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Users</th>
+          <th>Books</th>
+          <th>BookId</th>
+          <th>Issue Date</th>
+          <th>Return Date</th>
+          <th>Penalty</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Loop through issuance records and display in tabular format -->
+        <% issuanceTable.forEach((issuance) => { %>
+        <tr>
+          <td><%= issuance.users %></td>
+          <td><%= issuance.books %></td>
+          <td><%= issuance.bookId %></td>
+          <td><%= issuance.issuedate %></td>
+          <td><%= issuance.returndate %></td>
+          <td><%= issuance.penalty %></td>
+        </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  </div>
+</body>
+<script src="C:\Users\smart\libraryApp\src\scripts\issuancecomponent.js"></script>
+</html>
